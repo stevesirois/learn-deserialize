@@ -45,9 +45,9 @@ namespace DeserializeFromFile
             MixStructure mixstuff = new();
 
             // Go thru the MixStructure section
-            foreach (var protectionItem in weatherForecast.MixStructure!)
+            foreach (var item in weatherForecast.MixStructure!)
             {
-                JsonElement innerArray = (JsonElement)protectionItem;
+                JsonElement innerArray = (JsonElement)item;
                 // Since will dealing with plain object, make sure it's an array next
                 if (innerArray.ValueKind == JsonValueKind.Array)
                 {
