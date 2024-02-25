@@ -77,9 +77,12 @@ namespace DeserializeFromFile
                 }
             }
             Console.WriteLine($"Start of MixStructure: {mixstuff.Start}");
-            Console.WriteLine(string.Join(", ", mixstuff.Answers.Select(pair => $"{pair.Key} => {pair.Value}")));
+            Console.WriteLine(string.Join(", ",
+                mixstuff.Answers.Select(pair => $"{pair.Key} => {pair.Value}")));
             Console.WriteLine("Leftover...");
-            Console.WriteLine(string.Join(", ", weatherForecast?.ExtensionData?.Select(pair => $"{pair.Key} => {pair.Value}")!));
+            Console.WriteLine(string.Join(", ",
+                weatherForecast?.ExtensionData?.Select(
+                    pair => $"{pair.Key} => {pair.Value}")!));
         }
     }
 }
